@@ -11,8 +11,8 @@ var accountSid = process.env.ACCOUNT_SID,
 
 var job = new cronJob('00 56 23 * * *', function(){
   client.messages.create({
-    to: '+15087359042',
-    from: '+19712642181',
+    to: '+' + PHONE_NUMBER,
+    from: '+' + TWILIO_PHONE_NUMBER,
     body: 'TAKE YO PILL!',
   }, function(err, message) {
     console.log(message);
